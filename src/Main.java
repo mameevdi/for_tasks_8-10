@@ -16,15 +16,16 @@ public class Main {
         System.out.println();
     }
     public static void task9() {
-        System.out.println("Задача 8"); //Посчитайтесколько будет денег при условии, что вы откладываете в банк под проценты — 12% годовых
-        int savings = 0;
-        int percent = 0;
+        System.out.println("Задача 9"); //Посчитайтесколько будет денег при условии, что вы откладываете в банк под проценты — 12% годовых
+        double savings = 29000;
+        double percent = 0.01;
+        double total = 0.01;
         for (int i = 1; i <= 12; ++i) {
-            percent = savings/100;
-            savings = savings + percent + 29000;
-            System.out.println("Месяц " + i + "-й, сумма накоплений равна " + savings + " рублей");
+            savings = savings + savings*percent;
+            total = total+savings;
+            System.out.println("Месяц " + i + "-й, сумма накоплений равна " + total + " рублей");
         }
-        System.out.println("За год удалось накопить " + savings + " рублей");
+        System.out.println("За год удалось накопить " + total + " рублей");
         System.out.println();
     }
     public static void task10() {
